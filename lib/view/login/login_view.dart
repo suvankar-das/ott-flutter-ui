@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ott_code_frontend/common/color_extension.dart';
 import 'package:ott_code_frontend/common_widgets/rounded_button.dart';
 import 'package:ott_code_frontend/common_widgets/rounded_text_field.dart';
-import 'package:ott_code_frontend/view/forgot_password.dart/forgot_password_view.dart';
+import 'package:ott_code_frontend/view/forgot_password/forgot_password_view.dart';
 import 'package:ott_code_frontend/view/registration/registration_view.dart';
 
 class LoginView extends StatefulWidget {
