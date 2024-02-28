@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ott_code_frontend/common/color_extension.dart';
 import 'package:ott_code_frontend/common_widgets/rounded_button.dart';
 import 'package:ott_code_frontend/common_widgets/rounded_text_field.dart';
+import 'package:ott_code_frontend/view/forgot_password.dart/forgot_password_view.dart';
+import 'package:ott_code_frontend/view/registration/registration_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -109,7 +111,12 @@ class _LoginViewState extends State<LoginView> {
                     obscureText: true,
                     controller: txtPassword,
                     right: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ForgotPassword()));
+                      },
                       child: Text(
                         "Forgot ?",
                         style: TextStyle(
@@ -183,7 +190,13 @@ class _LoginViewState extends State<LoginView> {
                           fontWeight: FontWeight.w400)),
 
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      // redirect register
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const RegistrationView()));
+                    },
                     child: Text(
                       "Register",
                       style: TextStyle(
