@@ -3,6 +3,7 @@ import 'package:ott_code_frontend/common/color_extension.dart';
 import 'package:ott_code_frontend/common_widgets/rounded_button.dart';
 import 'package:ott_code_frontend/common_widgets/rounded_text_field.dart';
 import 'package:ott_code_frontend/view/forgot_password/forgot_password_view.dart';
+import 'package:ott_code_frontend/view/main_tab/main_tab_bar_view.dart';
 import 'package:ott_code_frontend/view/registration/registration_view.dart';
 
 class LoginView extends StatefulWidget {
@@ -129,7 +130,14 @@ class _LoginViewState extends State<LoginView> {
                   const SizedBox(
                     height: 30,
                   ),
-                  RoundedButton(onPressed: () {}, title: "Log In"),
+                  RoundedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MainTabBarView()));
+                      },
+                      title: "Log In"),
                   const SizedBox(
                     height: 30,
                   ),
